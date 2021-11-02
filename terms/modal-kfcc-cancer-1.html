@@ -5,6 +5,8 @@
 			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal-body">
+			<button type="button" ak-pop="kfcc-addendum-1" class="btn btn-link ak-pop">별첨1</button>
+			<button data-bs-target="#modal-kfcc-addendum-1" data-bs-toggle="modal" style="display:none"></button>
 			<a class="btn btn-secondary w-md-100" data-bs-toggle="collapse" href="#collapse-kfcc-1" role="button" aria-expanded="false" aria-controls="collapse-kfcc-1">약관 목록 보기</a>
 			<!-- 약관 목록 -->
 			<div class="card card-body collapse mt-3 mb-3" id="collapse-kfcc-1">
@@ -352,3 +354,17 @@
 		</div>
 	</div>
 </div>
+<script>
+	//$('.ak-pop').click(function (){
+	//	var akPop = $(this).attr('ak-pop');
+	//	var _this = $(this);
+	//	$('#modal-' + akPop).load('./terms/modal-' + akPop + '.html');
+	//	ClickNext(_this);
+	//});
+
+	//function ClickNext(_this) {
+	//	setTimeout(function() {
+	//		_this.next('button').click();
+	//	},100)
+	//}
+</script>

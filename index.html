@@ -126,20 +126,6 @@ ol ul {
 							<button type="button" ak-pop="kfcc-cancer-1" class="btn btn-primary w-md-100 ak-pop">약관</button>
 							<button type="button" data-bs-toggle="modal" data-bs-target="#modal-kfcc-cancer-1" style="display:none">약관</button>
 						</div>
-						<script>
-							$('.ak-pop').click(function (){
-								var akPop = $(this).attr('ak-pop');
-								var _this = $(this);
-								$('#modal-' + akPop).load('./terms/modal-' + akPop + '.html');
-								ClickNext(_this);
-							});
-
-							function ClickNext(_this) {
-								setTimeout(function() {
-									_this.next('button').click();
-								},100)
-							}
-						</script>
 					</div>
 				</div>
 			</div>
@@ -166,7 +152,7 @@ ol ul {
 
 
 <!-- 새마을금고중앙회 별첨1 -->
-<div class="modal fade" id="modal-addendum-1" aria-hidden="true" aria-labelledby="modalKfccAddendum-1" tabindex="-1">
+<div class="modal fade" id="modal-kfcc-addendum-1" aria-hidden="true" aria-labelledby="modalKfccAddendum-1" tabindex="-1">
 	<div class="modal-dialog modal-dialog-scrollable modal-fullscreen p-md-4">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -263,7 +249,29 @@ ol ul {
 	</div>
 </div>
 
+<script>
+	function setakPop(_this) {
+		var akPop = _this.attr('ak-pop');
+		return akPop
+	}
+	
 
+	function ClickNext(_this) {
+		setTimeout(function() {
+			_this.next('button').click();
+		},100)
+	}
+
+	$(function() {
+		$('.ak-pop').on('click', function () {
+			var _this = $(this);
+			_akPop = setakPop(_this);
+			$('#modal-' + _akPop).load('./terms/modal-' + _akPop + '.html', function() {console.log('aa')});
+			ClickNext(_this);
+		});
+	})
+
+</script>
 
 </body>
 </html>
