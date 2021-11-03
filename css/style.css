@@ -18,7 +18,8 @@ ol ul { list-style: disc;}
 .offcanvas-full .offcanvas-header {border-bottom:1px solid #dee2e6;}
 
 
-.modal.fade .modal-dialog{transition: none !important;}
+.modal.fade .modal-dialog,
+.fade{transition: none !important;}
 
 @media (min-width: 768px) {
     .w-md-100 {width: auto;}
