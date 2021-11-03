@@ -1,1 +1,25 @@
+.navbar-nav-scroll {--bs-scroll-height: 200px !important;}
 
+ol {margin-bottom: 0;padding-left: 1.55rem;}
+ol>li+li {margin-top: 5px;}
+ol ol {list-style: hangul;}
+ol ol ol {list-style: upper-latin;}
+ol ul { list-style: disc;}
+
+.w-md-100 { width: 100%;}
+
+.btn-addendum {padding:0 !important;vertical-align:baseline !important;}
+[ak-pop] + button{display:none;}
+
+
+
+.offcanvas-full{top: 0;left: 0;width: 95%;border-right: 1px solid rgba(0,0,0,.2);transform: translateX(-100%);z-index:1061;}
+.offcanvas-backdrop {z-index:1060;}
+.offcanvas-full .offcanvas-header {border-bottom:1px solid #dee2e6;}
+
+
+
+
+@media (min-width: 768px) {
+    .w-md-100 {width: auto;}
+}
