@@ -7,7 +7,7 @@
 	<title>Document</title>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="./js/bootstrap.bundle.min.js"></script>
-	<script src="./js/inc.js"></script>
+	<script src="./js/common.js"></script>
 	<link rel="stylesheet" href="./css/bootstrap.min.css" media="all">
 	<link rel="stylesheet" href="./css/style.css" media="all">
 </head>
@@ -35,7 +35,7 @@
 		list-style: upper-latin;
 	}
 
-ol ul {
+	ol ul {
 		list-style: disc;
 	}
 
@@ -43,10 +43,10 @@ ol ul {
 		width: 100%;
 	}
 
-.btn-addendum {
-	padding:0 !important;
-	vertical-align:baseline !important;
-}
+	.btn-addendum {
+		padding:0 !important;
+		vertical-align:baseline !important;
+	}
 
 	@media (min-width: 768px) {
 		.w-md-100 {
@@ -123,8 +123,7 @@ ol ul {
 							<input type="text" class="form-control" id="cancerIpt4" readonly value="5,000,000원">
 						</div>
 						<div>
-							<button type="button" ak-pop="kfcc-cancer-1" class="btn btn-primary w-md-100 ak-pop">약관</button>
-							<button type="button" data-bs-toggle="modal" data-bs-target="#modal-kfcc-cancer-1" style="display:none">약관</button>
+							<button type="button" ak-pop="kfcc-cancer-1" class="btn btn-primary w-md-100">약관</button><button type="button" data-bs-toggle="modal" data-bs-target="#modal-kfcc-cancer-1" style="display:none">약관</button>
 						</div>
 					</div>
 				</div>
@@ -138,7 +137,7 @@ ol ul {
 		<h4 id="item-1" class="mt-2 pt-3">Item 1</h4>
 		<div class="row">
 			<div class="col">
-				11
+				
 			</div>
 		</div>
 	</div>
@@ -250,27 +249,10 @@ ol ul {
 </div>
 
 <script>
-	function setakPop(_this) {
-		var akPop = _this.attr('ak-pop');
-		return akPop
-	}
-	
 
-	function ClickNext(_this) {
-		setTimeout(function() {
-			_this.next('button').click();
-		},100)
-	}
 
-	$(function() {
-		$('.ak-pop').on('click', function () {
-			var _this = $(this);
-			_akPop = setakPop(_this);
-			$('#modal-' + _akPop).load('./terms/modal-' + _akPop + '.html', function() {console.log('aa')});
-			ClickNext(_this);
-		});
-	})
 
+activeModal()
 </script>
 
 </body>
